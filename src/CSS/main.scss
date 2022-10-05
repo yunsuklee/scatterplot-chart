@@ -1,0 +1,79 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: $text;
+  font-family: 'Oswald', sans-serif;
+}
+
+body, .container {
+  background-color: $background;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.container {
+  width: 885px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $container;
+  transition: all .4s ease-out;
+  border: $container-border;
+  border-radius: 5%;
+  box-shadow: $container-shadow;
+  
+  svg {
+    background-color: $svg;
+    border-radius: 5%;
+    color: black;
+  }
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.container-credits {
+  text-align: center;
+
+  .credits {
+    letter-spacing: 2px;
+    margin-top: 40px;
+    text-align: center;
+  
+    span {
+      color: $highlight;
+    }
+  }
+
+  i {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: black;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+  }
+
+  i:hover {
+    transform: scale(1.1);
+  }
+}
