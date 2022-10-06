@@ -3,7 +3,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
-  color: #FFECEF;
+  color: black;
   font-family: "Oswald", sans-serif;
 }
 
@@ -24,6 +24,7 @@ h1 {
   font-size: 3rem;
   letter-spacing: 4px;
   margin-bottom: 20px;
+  color: #FFECEF;
 }
 
 .container {
@@ -39,10 +40,36 @@ h1 {
   border-radius: 5%;
   box-shadow: -10px 10px 10px 5px black;
 }
+.container #tooltip {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2px;
+  font-size: 12px;
+  background-color: #FFECEF;
+  border: 1px solid #FFECEF;
+  border-radius: 2px;
+  pointer-events: none;
+  letter-spacing: 1px;
+}
 .container svg {
   background-color: #FFCACA;
   border-radius: 5%;
   color: black;
+}
+.container svg #x-axis, .container svg #y-axis {
+  color: black;
+  background-color: black;
+}
+.container svg .dot {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.container svg .dot:hover {
+  opacity: 0.5;
 }
 
 .container:hover {
@@ -53,6 +80,7 @@ h1 {
   text-align: center;
 }
 .container-credits .credits {
+  color: #FFECEF;
   letter-spacing: 2px;
   margin-top: 40px;
   text-align: center;
